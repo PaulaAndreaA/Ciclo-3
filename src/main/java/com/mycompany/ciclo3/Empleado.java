@@ -20,7 +20,7 @@ public class Empleado {
     }
 
     public void setNombreCompleto(String nombreCompleto) {
-        this.nomobreCompleto = nombreCompleto;
+        this.nombreCompleto = nombreCompleto;
     }
 
     public String getNombreCompleto() {
