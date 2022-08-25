@@ -36,7 +36,7 @@ public class Empleado {
     }
 
     public void setEmrpesaDelEmpleado(String emrpesaDelEmpleado) {
-        this.emrpesaDelEmpleado = emrpesaDelEmpleado;
+        this.empresaDelEmpleado = empresaDelEmpleado;
 
     }
 
