@@ -40,7 +40,7 @@ public class Empleado {
 
     }
 
-    public String getEmrpesaDelEmpleado() {
+    public String getEmpresaDelEmpleado() {
         return emrpesaDelEmpleado;
     }
 
