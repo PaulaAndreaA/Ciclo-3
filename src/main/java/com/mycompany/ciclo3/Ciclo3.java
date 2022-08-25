@@ -13,6 +13,6 @@ public class Ciclo3 {
 
     public static void main(String[] args) {
         Empleado empleadoMonica = new Empleado();
-        
+        empleadoMonica.setNombreCompleto("monica carvajal");
     }
 }
