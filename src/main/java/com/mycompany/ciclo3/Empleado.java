@@ -41,7 +41,7 @@ public class Empleado {
     }
 
     public String getEmpresaDelEmpleado() {
-        return emrpesaDelEmpleado;
+        return empresaDelEmpleado;
     }
 
     public void setRolDelEmpleado(String rolDelEmpleado) {
