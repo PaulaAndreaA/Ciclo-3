@@ -10,10 +10,10 @@ package com.mycompany.ciclo3;
  */
 public class Empleado {
 
-    public String nombreCompleto;
-    public String correoElectronico;
-    public String empresaDelEmpleado;
-    public String rolDelEmpleado;
+    private String nombreCompleto;
+    private String correoElectronico;
+    private String empresaDelEmpleado;
+    private String rolDelEmpleado;
 
     public Empleado(){
         
