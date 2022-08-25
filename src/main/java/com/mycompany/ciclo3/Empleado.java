@@ -24,7 +24,7 @@ public class Empleado {
     }
 
     public String getNombreCompleto() {
-        return nomobreCompleto;
+        return nombreCompleto;
     }
 
     public void setCorreoElectronico(String correoElectronico) {
