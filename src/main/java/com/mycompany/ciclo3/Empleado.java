@@ -35,7 +35,7 @@ public class Empleado {
         return correoElectronico;
     }
 
-    public void setEmrpesaDelEmpleado(String emrpesaDelEmpleado) {
+    public void setEmpresaDelEmpleado(String empresaDelEmpleado) {
         this.empresaDelEmpleado = empresaDelEmpleado;
 
     }
