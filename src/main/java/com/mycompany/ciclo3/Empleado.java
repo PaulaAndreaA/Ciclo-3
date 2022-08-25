@@ -12,7 +12,7 @@ public class Empleado {
 
     public String nomobreCompleto;
     public String correoElectronico;
-    public String emrpesaDelEmpleado;
+    public String empresaDelEmpleado;
     public String rolDelEmpleado;
 
     public Empleado(){
