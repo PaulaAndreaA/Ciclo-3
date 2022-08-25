@@ -10,7 +10,7 @@ package com.mycompany.ciclo3;
  */
 public class Empleado {
 
-    public String nomobreCompleto;
+    public String nombreCompleto;
     public String correoElectronico;
     public String empresaDelEmpleado;
     public String rolDelEmpleado;
