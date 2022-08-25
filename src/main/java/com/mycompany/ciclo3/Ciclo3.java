@@ -12,6 +12,7 @@ package com.mycompany.ciclo3;
 public class Ciclo3 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Empleado empleadoMonica = new Empleado();
+        
     }
 }
