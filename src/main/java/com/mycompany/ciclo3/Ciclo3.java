@@ -12,6 +12,9 @@ package com.mycompany.ciclo3;
 public class Ciclo3 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Empresa empresa1=new Empresa();
+        empresa1.setNombreEmpresa("BancoVR");
+        
+        MovimientoDinero movimiento=new MovimientoDinero();
     }
 }
