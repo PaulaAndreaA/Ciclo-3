@@ -9,11 +9,11 @@ package com.mycompany.ciclo3;
  * @author Paula
  */
 public class MovimientoDinero {
-    String montoDelMovimiento;
-    String montosPositivos;
-    String montosNegativos;
-    String conceptosDelMovimiento;
-    String MovimientoDeUsuario;
+    private String montoDelMovimiento;
+   private String montosPositivos;
+   private String montosNegativos;
+   private String conceptosDelMovimiento;
+   private String MovimientoDeUsuario;
     
     public MovimientoDinero(){}
 
