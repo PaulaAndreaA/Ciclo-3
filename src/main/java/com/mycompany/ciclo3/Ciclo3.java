@@ -18,7 +18,7 @@ public class Ciclo3 {
         
         MovimientoDinero movimiento=new MovimientoDinero();
 
-        Empleado empleadoMonica = new Empleado();
+        Usuario empleadoMonica = new Usuario();
         empleadoMonica.setNombreCompleto("monica carvajal");
 
     }
