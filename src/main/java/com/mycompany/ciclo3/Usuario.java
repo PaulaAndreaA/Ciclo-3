@@ -8,15 +8,15 @@ package com.mycompany.ciclo3;
  *
  * @author Mónica
  */
-public class Empleado {
+public class Usuario {
 
     private String nombreCompleto;
     private String correoElectronico;
-    private String empresaDelEmpleado;
-    private String rolDelEmpleado;
+    private String empresaDelUsuario;
+    private Rol rolDelUsuario;
 
-    public Empleado(){
-        
+    public Usuario() {
+
     }
 
     public void setNombreCompleto(String nombreCompleto) {
@@ -35,21 +35,20 @@ public class Empleado {
         return correoElectronico;
     }
 
-    public void setEmpresaDelEmpleado(String empresaDelEmpleado) {
-        this.empresaDelEmpleado = empresaDelEmpleado;
+    public void setEmpresaDelUsuario(String empresaDelUsuario) {
+        this.empresaDelUsuario = empresaDelUsuario;
 
     }
 
-    public String getEmpresaDelEmpleado() {
-        return empresaDelEmpleado;
+    public String getEmpresaDelUsuario() {
+        return empresaDelUsuario;
     }
 
-    public void setRolDelEmpleado(String rolDelEmpleado) {
-        this.rolDelEmpleado = rolDelEmpleado;
+    public void setRolDelUsuario(Rol rolDelUsuario) {
+        this.rolDelUsuario = rolDelUsuario;
     }
 
-    public String getRolDelEmpleado() {
-        return rolDelEmpleado;
+    public Rol getRolDelUsuario() {
+        return rolDelUsuario;
     }
-
 }
