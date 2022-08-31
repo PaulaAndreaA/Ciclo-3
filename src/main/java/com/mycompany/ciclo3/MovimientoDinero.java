@@ -9,36 +9,18 @@ package com.mycompany.ciclo3;
  * @author Paula
  */
 public class MovimientoDinero {
-    private String montoDelMovimiento;
-   private String montosPositivos;
-   private String montosNegativos;
+    private long montoDelMovimiento;
    private String conceptosDelMovimiento;
-   private String MovimientoDeUsuario;
-    
-    public MovimientoDinero(){}
+   private Empleado movimientoDeUsuario;
+   
+   public MovimientoDinero(){}
 
-    public String getMontoDelMovimiento() {
+    public long getMontoDelMovimiento() {
         return montoDelMovimiento;
     }
 
-    public void setMontoDelMovimiento(String montoDelMovimiento) {
+    public void setMontoDelMovimiento(long montoDelMovimiento) {
         this.montoDelMovimiento = montoDelMovimiento;
-    }
-
-    public String getMontosPositivos() {
-        return montosPositivos;
-    }
-
-    public void setMontosPositivos(String montosPositivos) {
-        this.montosPositivos = montosPositivos;
-    }
-
-    public String getMontosNegativos() {
-        return montosNegativos;
-    }
-
-    public void setMontosNegativos(String montosNegativos) {
-        this.montosNegativos = montosNegativos;
     }
 
     public String getConceptosDelMovimiento() {
@@ -49,12 +31,12 @@ public class MovimientoDinero {
         this.conceptosDelMovimiento = conceptosDelMovimiento;
     }
 
-    public String getMovimientoDeUsuario() {
-        return MovimientoDeUsuario;
+    public Empleado getMovimientoDeUsuario() {
+        return movimientoDeUsuario;
     }
 
-    public void setMovimientoDeUsuario(String MovimientoDeUsuario) {
-        this.MovimientoDeUsuario = MovimientoDeUsuario;
+    public void setMovimientoDeUsuario(Empleado movimientoDeUsuario) {
+        this.movimientoDeUsuario = movimientoDeUsuario;
     }
-    
+ 
 }
