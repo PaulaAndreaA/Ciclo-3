@@ -11,7 +11,7 @@ package com.mycompany.ciclo3;
 public class MovimientoDinero {
     private long montoDelMovimiento;
    private String conceptosDelMovimiento;
-   private Empleado movimientoDeUsuario;
+   private Usuario movimientoDeUsuario;
    
    public MovimientoDinero(){}
 
@@ -31,11 +31,11 @@ public class MovimientoDinero {
         this.conceptosDelMovimiento = conceptosDelMovimiento;
     }
 
-    public Empleado getMovimientoDeUsuario() {
+    public Usuario getMovimientoDeUsuario() {
         return movimientoDeUsuario;
     }
 
-    public void setMovimientoDeUsuario(Empleado movimientoDeUsuario) {
+    public void setMovimientoDeUsuario(Usuario movimientoDeUsuario) {
         this.movimientoDeUsuario = movimientoDeUsuario;
     }
  
