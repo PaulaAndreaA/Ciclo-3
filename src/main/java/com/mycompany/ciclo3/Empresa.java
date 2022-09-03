@@ -13,8 +13,9 @@ public class Empresa {
     private String direccion;
     private String telefono;
     private String nit;
-    
-    public Empresa(){}
+
+    public Empresa() {
+    }
 
     public String getNombreEmpresa() {
         return nombreEmpresa;
@@ -47,5 +48,5 @@ public class Empresa {
     public void setNit(String nit) {
         this.nit = nit;
     }
-    
+
 }
