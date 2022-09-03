@@ -9,11 +9,14 @@ package com.mycompany.ciclo3;
  * @author Paula
  */
 public class MovimientoDinero {
+
     private long montoDelMovimiento;
-   private String conceptosDelMovimiento;
-   private Usuario movimientoDeUsuario;
-   
-   public MovimientoDinero(){}
+    private String conceptosDelMovimiento;
+    private Usuario movimientoDeUsuario;
+    private Empresa movimientoEmpresa;
+
+    public MovimientoDinero() {
+    }
 
     public long getMontoDelMovimiento() {
         return montoDelMovimiento;
@@ -38,5 +41,13 @@ public class MovimientoDinero {
     public void setMovimientoDeUsuario(Usuario movimientoDeUsuario) {
         this.movimientoDeUsuario = movimientoDeUsuario;
     }
- 
+
+    public Empresa getmovimientoEmpresa() {
+        return movimientoEmpresa;
+    }
+
+    public void setmovimientoEmpresa(Empresa movimientoEmpresa) {
+        this.movimientoEmpresa = movimientoEmpresa;
+    }
+
 }
