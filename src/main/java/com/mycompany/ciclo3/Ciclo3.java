@@ -5,18 +5,23 @@
 
 package com.mycompany.ciclo3;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 /**
  *
  * @author Paula
  */
+@SpringBootApplication
 public class Ciclo3 {
 
     public static void main(String[] args) {
+        SpringApplication.run(Ciclo3.class, args);
 
         Empresa empresa1=new Empresa();
         empresa1.setNombreEmpresa("BancoVR");
         
-        MovimientoDinero movimiento=new MovimientoDinero();
+        MovimientoDinero movimientoDinero=new MovimientoDinero();
 
         Usuario empleadoMonica = new Usuario();
         empleadoMonica.setNombreCompleto("monica carvajal");
