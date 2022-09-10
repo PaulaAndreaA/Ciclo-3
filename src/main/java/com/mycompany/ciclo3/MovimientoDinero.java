@@ -12,7 +12,7 @@ public class MovimientoDinero {
 
     private long montoDelMovimiento;
     private String conceptosDelMovimiento;
-    private Usuario movimientoDeUsuario;
+    private Usuario usuario;
     private Empresa movimientoEmpresa;
 
     public MovimientoDinero() {
@@ -35,11 +35,11 @@ public class MovimientoDinero {
     }
 
     public Usuario getMovimientoDeUsuario() {
-        return movimientoDeUsuario;
+        return usuario;
     }
 
     public void setMovimientoDeUsuario(Usuario movimientoDeUsuario) {
-        this.movimientoDeUsuario = movimientoDeUsuario;
+        this.usuario = movimientoDeUsuario;
     }
 
     public Empresa getmovimientoEmpresa() {

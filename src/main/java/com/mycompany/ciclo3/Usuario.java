@@ -12,7 +12,6 @@ public class Usuario {
 
     private String nombreCompleto;
     private String correoElectronico;
-    private String empresaDelUsuario;
     private Rol rolDelUsuario;
 
     public Usuario() {
@@ -33,15 +32,6 @@ public class Usuario {
 
     public String getCorreoElectronico() {
         return correoElectronico;
-    }
-
-    public void setEmpresaDelUsuario(String empresaDelUsuario) {
-        this.empresaDelUsuario = empresaDelUsuario;
-
-    }
-
-    public String getEmpresaDelUsuario() {
-        return empresaDelUsuario;
     }
 
     public void setRolDelUsuario(Rol rolDelUsuario) {

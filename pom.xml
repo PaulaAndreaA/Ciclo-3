@@ -13,16 +13,11 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<description>My company project for Spring Boot</description>
 	<properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>18</maven.compiler.source>
-        <maven.compiler.target>18</maven.compiler.target>
-        <exec.mainClass>com.mycompany.ciclo3.Ciclo3</exec.mainClass>
-	</properties>
+        <java.version>8</java.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
