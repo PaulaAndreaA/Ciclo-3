@@ -1,4 +1,4 @@
-package com.mycompany.ciclo3.Controller;
+package com.mycompany.ciclo3.controller;
 
 import java.util.List;
 
