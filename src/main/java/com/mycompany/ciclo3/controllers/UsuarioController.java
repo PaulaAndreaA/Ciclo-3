@@ -1,14 +1,9 @@
-package com.mycompany.ciclo3.controller;
+package com.mycompany.ciclo3.controllers;
 
 import java.util.List;
 
-import javax.print.DocFlavor.STRING;
-import javax.xml.ws.Response;
-
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.http.StreamingHttpOutputMessage.Body;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -16,8 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mycompany.ciclo3.Usuario;
-
-
 
 @RestController
 public class UsuarioController {
@@ -46,11 +39,5 @@ public class UsuarioController {
     public ResponseEntity<String> borrarUsuario() {
         return new ResponseEntity<>("usuario eliminado", HttpStatus.OK);
     }
-
-
-
-
-
-
 
 }
