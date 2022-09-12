@@ -9,12 +9,22 @@ package com.mycompany.ciclo3;
  * @author Paula
  */
 public class Empresa {
+
+    private String id;
     private String nombreEmpresa;
     private String direccion;
     private String telefono;
     private String nit;
 
     public Empresa() {
+    }
+    
+    public String getId(){
+        return id;
+    }
+
+    public void setId(String id){
+        this.id = id;
     }
 
     public String getNombreEmpresa() {
