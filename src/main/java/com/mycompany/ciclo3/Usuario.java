@@ -13,6 +13,7 @@ public class Usuario {
     private String nombreCompleto;
     private String correoElectronico;
     private Rol rolDelUsuario;
+    private String usuarioId;
 
     public Usuario() {
 
@@ -40,5 +41,13 @@ public class Usuario {
 
     public Rol getRolDelUsuario() {
         return rolDelUsuario;
+    }
+
+    public void setusuarioId(String usuarioId) {
+        this.usuarioId = usuarioId;
+    }
+
+    public String getusuarioId() {
+        return usuarioId;
     }
 }
