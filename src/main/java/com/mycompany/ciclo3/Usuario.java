@@ -4,16 +4,27 @@
  */
 package com.mycompany.ciclo3;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  *
  * @author Mónica
  */
+
+@Entity
+@Table(name = "usuario")
 public class Usuario {
 
     private String nombreCompleto;
     private String correoElectronico;
     private Rol rolDelUsuario;
-    private String usuarioId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long usuarioId;
 
     public Usuario() {
 
@@ -43,11 +54,11 @@ public class Usuario {
         return rolDelUsuario;
     }
 
-    public void setusuarioId(String usuarioId) {
+    public void setusuarioId(Long usuarioId) {
         this.usuarioId = usuarioId;
     }
 
-    public String getusuarioId() {
+    public Long getusuarioId() {
         return usuarioId;
     }
 }
