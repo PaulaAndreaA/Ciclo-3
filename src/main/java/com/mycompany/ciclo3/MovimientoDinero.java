@@ -4,12 +4,23 @@
  */
 package com.mycompany.ciclo3;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  *
  * @author Paula
  */
+@Entity
+@Table(name = "movimiento_dinero")
 public class MovimientoDinero {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
     private long montoDelMovimiento;
     private String conceptosDelMovimiento;
     private Usuario usuario;
@@ -18,6 +29,13 @@ public class MovimientoDinero {
     public MovimientoDinero() {
     }
 
+    public long getId(){
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
     public long getMontoDelMovimiento() {
         return montoDelMovimiento;
     }

@@ -4,13 +4,23 @@
  */
 package com.mycompany.ciclo3;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  *
  * @author Paula
  */
+@Entity
+@Table(name = "empresa")
 public class Empresa {
 
-    private String id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String nombreEmpresa;
     private String direccion;
     private String telefono;
@@ -19,11 +29,11 @@ public class Empresa {
     public Empresa() {
     }
     
-    public String getId(){
+    public long getId(){
         return id;
     }
 
-    public void setId(String id){
+    public void setId(Long id){
         this.id = id;
     }
 

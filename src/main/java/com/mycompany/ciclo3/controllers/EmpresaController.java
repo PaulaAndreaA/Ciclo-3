@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mycompany.ciclo3.Empresa;
@@ -28,14 +29,14 @@ public class EmpresaController {
     }
 
     @PostMapping(value="/enterprises")
-    public ResponseEntity<Empresa> crearEmpresas(){
-        
-        return new ResponseEntity<>(HttpStatus.OK);
+    public ResponseEntity<Empresa> crearEmpresas(@RequestBody Empresa payload){
+        empresaService.crearEmpresas(payload);
+        return new ResponseEntity<>(payload, HttpStatus.CREATED);
         
     }
 
     @GetMapping(value="/enterprises/{empresaId}")
-    public ResponseEntity<Empresa> consultarEmpresaEntity(@PathVariable String empresaId){
+    public ResponseEntity<Empresa> consultarEmpresa(@PathVariable Long empresaId){
         Empresa empresa1 = empresaService.consultarEmpresa(empresaId);
 
         return new ResponseEntity<>(empresa1, HttpStatus.OK);
@@ -43,16 +44,18 @@ public class EmpresaController {
     }
 
     @PatchMapping(value="/enterprises/{empresaId}")
-    public ResponseEntity<Empresa> actualizarEmpresa(){
+    public ResponseEntity<Empresa> actualizarEmpresa(@PathVariable String empresaId){
+        Empresa empresa3 = empresaService.actualizarEmpresa(empresaId);
 
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>(empresa3, HttpStatus.OK);
         
     }
 
     @DeleteMapping(value="/enterprises/{empresaId}")
-    public ResponseEntity<String> eliminarEmpresa(){
+    public ResponseEntity<Empresa> eliminarEmpresa(@PathVariable Long empresaId){
+        Empresa empresa = empresaService.eliminarEmpresa(empresaId);
 
-        return new ResponseEntity<>("eliminar empresa", HttpStatus.OK);         
+        return new ResponseEntity<>(empresa, HttpStatus.OK);       
     }
 
 

@@ -2,38 +2,48 @@ package com.mycompany.ciclo3.services;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.mycompany.ciclo3.Empresa;
+import com.mycompany.ciclo3.repositories.EmpresaRepository;
 
 @Service
-public class EmpresaService {
+public class EmpresaService{
 
-    private List<Empresa> empresasC = new ArrayList<>();
+    @Autowired
+    public EmpresaRepository empresaRepository;
     
     public EmpresaService(){
-        Empresa empresa1 = new Empresa();
-        empresa1.setId("245");
-        empresa1.setNombreEmpresa("pol");
-        empresa1.setDireccion("cre 3-23");
-        empresa1.setNit("2234");
-        empresa1.setTelefono("243434");
-
-        empresasC.add(empresa1);
+        
     }
 
     public List<Empresa> consultarEmpresas (){
-        return empresasC;
+        Iterable<Empresa> empresasC= empresaRepository.findAll();
+        List<Empresa> listaTemporal1 = new ArrayList<>();
+        empresasC.forEach(listaTemporal1::add);
+        return listaTemporal1;
     }
 
-    public Empresa consultarEmpresa(String empresaId){
-        for (int i = 0; i < empresasC.size(); i++) {
-            Empresa empresa = empresasC.get(i);
-            if(empresa.getId().equals(empresaId)){
-                return empresa;
-            }
-            
-        }
+    public Empresa crearEmpresas(Empresa empresa){
+        
+        return empresaRepository.save(empresa);
+        
+    }
+
+    public Empresa consultarEmpresa(Long empresaId){
+        Optional<Empresa> empresa = empresaRepository.findById(empresaId);
+
+        return empresa.orElse(null);
+    }
+    
+    public Empresa actualizarEmpresa(String empresaId) {
         return null;
     }
 
+    public Empresa eliminarEmpresa(Long empresaId) {
+        empresaRepository.deleteById(empresaId);
+        return null;
+    }
 }
