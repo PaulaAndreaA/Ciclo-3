@@ -30,29 +30,25 @@ public class UsuarioController {
 
     @PostMapping(value = "/users")
     public ResponseEntity<Usuario> cearUsuario(@RequestBody Usuario payload) {
-        /*Usuario usuario = new Usuario();
-        usuario.setNombreCompleto("Monica Carvajal");
-        usuario.setCorreoElectronico("monica@gmail.com");
-        usuario.setRolDelUsuario(Rol.ADMINISTRADOR);
-        usuario.setusuarioId("cjnvkhndkl");
-        System.out.println(payload.getUsuarioId());*/
-
+        usuarioService.creaUsuario(payload);
         return new ResponseEntity<>(payload, HttpStatus.CREATED);
     }
 
     @GetMapping(value = "/user/{usuarioId}")
-    public ResponseEntity<Usuario> consultarUsuario(@PathVariable String usuarioId) {
+    public ResponseEntity<Usuario> consultarUsuario(@PathVariable Long usuarioId) {
         Usuario usuario1 = usuarioService.consultarUsuario(usuarioId);
         return new ResponseEntity<>(usuario1, HttpStatus.OK);
     }
 
     @PatchMapping(value = "/user/{usuarioId}")
-    public ResponseEntity<Usuario> actualizacionParcialUsuario() {
-        return new ResponseEntity<>(HttpStatus.OK);
+    public ResponseEntity<Usuario> actualizarUsuario(@PathVariable String usuarioId) {
+        Usuario usuario2 = usuarioService.actualizarUsuario( usuarioId);
+        return new ResponseEntity<>(usuario2, HttpStatus.OK);
     }
 
     @DeleteMapping(value = "/user/{usuarioId}")
-    public ResponseEntity<String> borrarUsuario() {
+    public ResponseEntity<String> borrarUsuario(@PathVariable Long usuarioId) {
+        Usuario usuario2 = usuarioService.borrarUsuario(usuarioId);
         return new ResponseEntity<>("usuario eliminado", HttpStatus.OK);
     }
 
