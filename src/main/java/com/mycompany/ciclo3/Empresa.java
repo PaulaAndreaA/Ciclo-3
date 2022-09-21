@@ -20,7 +20,7 @@ public class Empresa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long empresaId;
     private String nombreEmpresa;
     private String direccion;
     private String telefono;
@@ -29,12 +29,12 @@ public class Empresa {
     public Empresa() {
     }
     
-    public long getId(){
-        return id;
+    public long getEmpresaId(){
+        return empresaId;
     }
 
-    public void setId(Long id){
-        this.id = id;
+    public void setEmpresaId(Long empresaId){
+        this.empresaId = empresaId;
     }
 
     public String getNombreEmpresa() {
