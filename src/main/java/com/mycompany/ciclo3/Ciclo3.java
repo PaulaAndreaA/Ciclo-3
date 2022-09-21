@@ -21,7 +21,7 @@ public class Ciclo3 {
         Empresa empresa1=new Empresa();
         empresa1.setNombreEmpresa("BancoVR");
         
-        MovimientoDinero movimientoDinero=new MovimientoDinero();
+        MovimientoDinero movimientoDinero = new MovimientoDinero();
 
         Usuario empleadoMonica = new Usuario();
         empleadoMonica.setNombreCompleto("monica carvajal");
