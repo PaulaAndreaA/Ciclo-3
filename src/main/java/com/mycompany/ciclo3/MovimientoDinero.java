@@ -4,20 +4,45 @@
  */
 package com.mycompany.ciclo3;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
 /**
  *
  * @author Paula
  */
+@Entity
+@Table(name = "movimiento_dinero")
 public class MovimientoDinero {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long movimientoId;
     private long montoDelMovimiento;
     private String conceptosDelMovimiento;
+    @ManyToOne
+    @JoinColumn(name = "usuario_id")
     private Usuario usuario;
+    @ManyToOne
+    @JoinColumn(name = "empresa_id")
     private Empresa movimientoEmpresa;
 
     public MovimientoDinero() {
     }
 
+    public long getMovimientoId(){
+        return movimientoId;
+    }
+
+    public void setMovimientoId(long movimientoId) {
+        this.movimientoId = movimientoId;
+    }
+    
     public long getMontoDelMovimiento() {
         return montoDelMovimiento;
     }
