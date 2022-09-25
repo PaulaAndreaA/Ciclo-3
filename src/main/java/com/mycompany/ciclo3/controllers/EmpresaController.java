@@ -22,13 +22,13 @@ public class EmpresaController {
     @Autowired
     private EmpresaService empresaService; 
         
-    @GetMapping(value="/enterprises")
+    @GetMapping(value= "/enterprises")
     public ResponseEntity<List<Empresa>> consultarEmpresas(){
         List<Empresa> resultadoConsulta = empresaService.consultarEmpresas();
         return new ResponseEntity<>(resultadoConsulta, HttpStatus.OK);
     }
 
-    @PostMapping(value="/enterprises")
+    @PostMapping(value= "/enterprises")
     public ResponseEntity<Empresa> crearEmpresas(@RequestBody Empresa payload){
         empresaService.crearEmpresas(payload);
         return new ResponseEntity<>(payload, HttpStatus.CREATED);
@@ -44,18 +44,18 @@ public class EmpresaController {
     }
 
     @PatchMapping(value="/enterprises/{empresaId}")
-    public ResponseEntity<Empresa> actualizarEmpresa(@PathVariable String empresaId){
-        Empresa empresa3 = empresaService.actualizarEmpresa(empresaId);
+    public ResponseEntity<Empresa> actualizarEmpresa(@PathVariable Long empresaId, @RequestBody Empresa empresa){
+        Empresa empresa3 = empresaService.actualizarEmpresa(empresaId, empresa);
 
         return new ResponseEntity<>(empresa3, HttpStatus.OK);
         
     }
 
     @DeleteMapping(value="/enterprises/{empresaId}")
-    public ResponseEntity<Empresa> eliminarEmpresa(@PathVariable Long empresaId){
-        Empresa empresa = empresaService.eliminarEmpresa(empresaId);
+    public ResponseEntity<String> eliminarEmpresa(@PathVariable Long empresaId){
+        empresaService.eliminarEmpresa(empresaId);
 
-        return new ResponseEntity<>(empresa, HttpStatus.OK);       
+        return new ResponseEntity<>("empresa eliminada", HttpStatus.OK);       
     }
 
 
