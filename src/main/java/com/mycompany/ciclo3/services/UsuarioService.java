@@ -6,7 +6,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.mycompany.ciclo3.Rol;
+
 import com.mycompany.ciclo3.Usuario;
 import com.mycompany.ciclo3.repositories.UsuarioRepository;
 
@@ -35,14 +35,19 @@ public class UsuarioService {
         return usuarioRepository.save(nuevoUsuario);
     }
 
-    public Usuario actualizarUsuario(String usuarioId) {
+    public Usuario actualizarUsuario(long usuarioId, Usuario usuario) {
+        if (usuarioRepository.existsById(usuarioId)) {
+            usuario.setusuarioId(usuarioId);
+            return usuarioRepository.save(usuario);
+        }
         return null;
 
     }
 
-    public Usuario borrarUsuario(Long usuarioId) {
-        usuarioRepository.deleteById(usuarioId);
-        return null;
+    public void borrarUsuario(Long usuarioId) {
+        if (usuarioRepository.existsById(usuarioId)) {
+            usuarioRepository.deleteById(usuarioId);
+        }
     }
 
 }

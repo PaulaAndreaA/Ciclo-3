@@ -30,8 +30,8 @@ public class UsuarioController {
 
     @PostMapping(value = "/users")
     public ResponseEntity<Usuario> cearUsuario(@RequestBody Usuario payload) {
-        usuarioService.creaUsuario(payload);
-        return new ResponseEntity<>(payload, HttpStatus.CREATED);
+        Usuario nuevUsuario = usuarioService.creaUsuario(payload);
+        return new ResponseEntity<>(nuevUsuario, HttpStatus.CREATED);
     }
 
     @GetMapping(value = "/user/{usuarioId}")
@@ -41,14 +41,14 @@ public class UsuarioController {
     }
 
     @PatchMapping(value = "/user/{usuarioId}")
-    public ResponseEntity<Usuario> actualizarUsuario(@PathVariable String usuarioId) {
-        Usuario usuario2 = usuarioService.actualizarUsuario( usuarioId);
+    public ResponseEntity<Usuario> actualizarUsuario(@PathVariable Long usuarioId, @RequestBody Usuario usuario) {
+        Usuario usuario2 = usuarioService.actualizarUsuario( usuarioId, usuario);
         return new ResponseEntity<>(usuario2, HttpStatus.OK);
     }
 
     @DeleteMapping(value = "/user/{usuarioId}")
     public ResponseEntity<String> borrarUsuario(@PathVariable Long usuarioId) {
-        Usuario usuario2 = usuarioService.borrarUsuario(usuarioId);
+         usuarioService.borrarUsuario(usuarioId);
         return new ResponseEntity<>("usuario eliminado", HttpStatus.OK);
     }
 
