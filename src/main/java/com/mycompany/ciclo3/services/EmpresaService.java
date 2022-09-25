@@ -38,12 +38,18 @@ public class EmpresaService{
         return empresa.orElse(null);
     }
     
-    public Empresa actualizarEmpresa(String empresaId) {
+    public Empresa actualizarEmpresa(Long empresaId, Empresa empresa) {
+        if(empresaRepository.existsById(empresaId)){
+            empresa.setEmpresaId(empresaId);
+            return empresaRepository.save(empresa);
+        }
+
         return null;
     }
 
-    public Empresa eliminarEmpresa(Long empresaId) {
-        empresaRepository.deleteById(empresaId);
-        return null;
+    public void eliminarEmpresa(Long empresaId) {
+        if(empresaRepository.existsById((empresaId))){
+            empresaRepository.deleteById(empresaId);
+        }
     }
 }
