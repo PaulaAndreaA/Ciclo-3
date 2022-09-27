@@ -29,7 +29,7 @@ public class Empresa {
     public Empresa() {
     }
     
-    public long getEmpresaId(){
+    public Long getEmpresaId(){
         return empresaId;
     }
 
