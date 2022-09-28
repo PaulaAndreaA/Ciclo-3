@@ -22,32 +22,32 @@ public class MovimientoDinero {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long movimientoId;
-    private long montoDelMovimiento;
+    private Long movimientoId;
+    private Long montoDelMovimiento;
     private String conceptosDelMovimiento;
     @ManyToOne
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
     @ManyToOne
     @JoinColumn(name = "empresa_id")
-    private Empresa movimientoEmpresa;
+    private Empresa empresa;
 
     public MovimientoDinero() {
     }
 
-    public long getMovimientoId(){
+    public Long getMovimientoId() {
         return movimientoId;
     }
 
-    public void setMovimientoId(long movimientoId) {
+    public void setMovimientoId(Long movimientoId) {
         this.movimientoId = movimientoId;
     }
-    
-    public long getMontoDelMovimiento() {
+
+    public Long getMontoDelMovimiento() {
         return montoDelMovimiento;
     }
 
-    public void setMontoDelMovimiento(long montoDelMovimiento) {
+    public void setMontoDelMovimiento(Long montoDelMovimiento) {
         this.montoDelMovimiento = montoDelMovimiento;
     }
 
@@ -59,20 +59,20 @@ public class MovimientoDinero {
         this.conceptosDelMovimiento = conceptosDelMovimiento;
     }
 
-    public Usuario getMovimientoDeUsuario() {
+    public Usuario getUsuario() {
         return usuario;
     }
 
-    public void setMovimientoDeUsuario(Usuario movimientoDeUsuario) {
-        this.usuario = movimientoDeUsuario;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
-    public Empresa getmovimientoEmpresa() {
-        return movimientoEmpresa;
+    public Empresa getEmpresa() {
+        return empresa;
     }
 
-    public void setmovimientoEmpresa(Empresa movimientoEmpresa) {
-        this.movimientoEmpresa = movimientoEmpresa;
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
     }
 
 }

@@ -29,10 +29,9 @@ public class EmpresaController {
     }
 
     @PostMapping(value= "/enterprises")
-    public ResponseEntity<Empresa> crearEmpresas(@RequestBody Empresa payload){
-        empresaService.crearEmpresas(payload);
-        return new ResponseEntity<>(payload, HttpStatus.CREATED);
-        
+    public ResponseEntity<Empresa> crearEmpresas(@RequestBody Empresa empresaCreada){
+        empresaService.crearEmpresas(empresaCreada);
+        return new ResponseEntity<>(empresaCreada, HttpStatus.CREATED);
     }
 
     @GetMapping(value="/enterprises/{empresaId}")
